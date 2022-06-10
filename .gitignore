@@ -1,0 +1,5 @@
+howto.txt
+.env
+.flaskenv
+venv
+src/config

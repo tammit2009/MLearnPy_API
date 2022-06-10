@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+<title>The Flask Tutorial | Edit Post</title>
+{% endblock %}
+
+{% block body %} 
+    <br>
+
+    <h1>Edit Post</h1>
+
+    <hr>
+    
+    <form action="/posts/edit/{{post.id}}" method="POST">
+        <div class="form-group">
+            <label>Title</label>
+            <input class="form-control" type="text" name="title" id="title" value="{{post.title}}" placeholder="Enter Title">
+        </div>
+        <div class="form-group">
+            <label>Author</label>
+            <input class="form-control" type="text" name="author" id="author" value="{{post.author}}" placeholder="Enter Author">
+        </div>
+        <div class="form-group">
+            <label>Post</label>
+            <textarea class="form-control" name="content" id="content" rows="3" placeholder="Enter Post">{{post.content}}</textarea>
+        </div>
+        <input class="btn btn-success" type="submit" value="Save">
+    </form>
+    <hr>
+
+{% endblock %}
