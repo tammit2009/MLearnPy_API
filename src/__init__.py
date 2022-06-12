@@ -2,6 +2,10 @@ from flask import Flask, jsonify, redirect, render_template, request
 import os
 from flask_jwt_extended import JWTManager
 
+from dotenv import load_dotenv
+load_dotenv('.env')         # the path to your .env file
+load_dotenv('.flaskenv')    # the path to your .flaskenv file
+
 from src.libs.auth import auth
 from src.libs.bookmarks import bookmarks
 from src.libs.mlearn import mlearn
